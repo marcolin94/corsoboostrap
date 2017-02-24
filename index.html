@@ -60,19 +60,19 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active" style ="background-image: url(https://source.unsplash.com/random);">
-      <div class="carousel-caption">
+      <div class="carousel-caption animated fadeInUp">
         <h3>Slide 1 </h3>
         <p>wdwedweh</p>
       </div>
     </div>
     <div class="item" style ="background-image: url(https://source.unsplash.com/category/buildings);">
-      <div class="carousel-caption">
+      <div class="carousel-caption animated fadeInUp">
         <h3>Slide 2</h3>
         <p>wdwedweh</p>
       </div>
     </div>
     <div class="item" style ="background-image: url(https://source.unsplash.com/category/food);">
-      <div class="carousel-caption">
+      <div class="carousel-caption animated fadeInUp">
         <h3>Slide 3</h3>
         <p>wdwedweh</p>
       </div>
@@ -90,7 +90,7 @@
 </div>
 
 <div class="container" >
-  <div class="row big-padding" id="four-coloums">
+  <div class="row big-padding animated fadeInUp" id="four-coloums">
 
     <div class="col-md-3 col-xs-6">
       <h3>Title</h3>
@@ -122,6 +122,10 @@
   </div>
 
   <hr>
+
+  <button type="button" id="popover1" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-html="true" data-content="<img class='img-responsive' src='https://source.unsplash.com/category/food/400' alt=''/> Vivamus sagittis<strong> lacus</strong> vel ." title="Titolo">
+      Popover on left
+  </button>
   <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
     Launch demo modal
@@ -188,6 +192,35 @@
     </div>
   </div>
 
+  <div class="panel-group big-padding" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <h4>
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          01.  Come arrivare alla Location
+        </a>
+      </h4>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-padding">
+          Rispota : ciao
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+        <h4 >
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Come fai
+          </a>
+        </h4>
+      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-padding">
+         02.  Risposta 2
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <p>
     <a class="btn btn-default" href="#" role="button">Link</a>
     <button class="btn btn-lg btn-primary " type="submit">Button</button>
@@ -195,7 +228,7 @@
     <input class="btn btn-xs btn-danger" type="submit" value="Submit">
   </p>
   <hr>
-  <a href="ciao" class="btn btn-info btn-block btn-lg">Test</a>
+  <a href="#two-columns" class="btn btn-info btn-block btn-lg">Test</a>
 
 </div> <!-- contanier-->
 
@@ -226,23 +259,32 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
-<script>
-$('body').scrollspy({ target: '#navbar-example' });
+  <script>
+  $('body').scrollspy({ target: '#navbar-example' });
 
-$('[data-toggle="popover"]').popover();
+  //Inizializza i popover
+  $('[data-toggle="popover"]').popover();
 
-$(".navbar-collapse ul li a[href^='#']").on('click',function(e){
+  $(".navbar-collapse ul li a[href^='#']").on('click',function(e){
 
-  target = this.hash;
-  e.preventDefault();
+    target = this.hash;
+    e.preventDefault();
 
-  $('html,body').animate({
-    scrollTop : $(this.hash).offset().top
-  }, 600, function(){
-    window.location.hash = target;
+    $('html,body').animate({
+      scrollTop : $(this.hash).offset().top
+    }, 600, function(){
+      window.location.hash = target;
+    });
+
   });
-
-});
-</script>
+/*
+  $('#popover1').on('mouseover', function(){
+    $('#popover1').popover('show');
+  });
+  $('#popover1').on('mouseout', function(){
+    $('#popover1').popover('toggle');
+  });
+*/
+  </script>
 </body>
 </html>

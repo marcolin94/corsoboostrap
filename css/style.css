@@ -26,4 +26,50 @@ body{}
 }
 
 .big-padding{padding: 100px 0 0;}
+
+.popover{z-index: 100;}
+.popover-content img {height:122px; margin-bottom: 15px;}
 .footer {min-height: 300px; background: #333}
+
+
+.panel h4 {margin:0;}
+.panel h4 a{display: black; background: #333; color: white; padding:15px 20px;}
+.panel h4 a:hover {background: #555;text-decoration: none;}
+.panel-padding{padding: 20px;}
+
+/* ANIMATED */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  animation-duration: .75s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
