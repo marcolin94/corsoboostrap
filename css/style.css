@@ -1,0 +1,29 @@
+body{}
+
+.navbar-brand,
+.navbar-nav > li > a {
+  height : 80px;
+  line-height: 50px;
+}
+
+
+.carousel-inner > .item {min-height: 600px; background-size: cover;background-position: center center;}
+
+.tab-pane{min-height:300px}
+
+.btn-primary {
+    color: #333;
+    background-color: transparent;
+    border-color: black;
+    border-radius: 0;
+    border-width: 3px;}
+}
+
+.btn-primary:hover {
+    color: red;
+    background-color: black;
+    border-color: black;
+}
+
+.big-padding{padding: 100px 0 0;}
+.footer {min-height: 300px; background: #333}
